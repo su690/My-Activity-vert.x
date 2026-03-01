@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Activity Planner</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Activity Planner</h1>
+      <p>Manage your activities and get notified before they start!</p>
+    </header>
+
+    <main>
+      <section class="activity-form">
+        <h2>Add New Activity</h2>
+        <form id="activityForm">
+          <div class="form-group">
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title" required>
+          </div>
+          <div class="form-group">
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" rows="3"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="dateTime">Date & Time:</label>
+            <input type="datetime-local" id="dateTime" name="dateTime" required>
+          </div>
+          <div class="form-group checkbox-group">
+            <input type="checkbox" id="notificationEnabled" name="notificationEnabled">
+            <label for="notificationEnabled">Enable notification (15 min before)</label>
+          </div>
+          <button type="submit" class="btn btn-primary">Add Activity</button>
+        </form>
+      </section>
+
+      <section class="activity-list">
+        <h2>Your Activities</h2>
+        <div id="activitiesContainer">
+          <p class="loading">Loading activities...</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Activity Planner - Stay organized!</p>
+    </footer>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
+
